@@ -431,7 +431,10 @@ add_action( 'init', 'register_partner_fields' );
 
 // Flush rewrites on activation
 function apcpt_activation() {
-    
+    // Exit if user does not have admin privliges
+    if ( ! current_user_can( 'activate_plugins' ) ) {
+        return;
+    }
         register_partners_cpt();
         flush_rewrite_rules();
     }
@@ -441,7 +444,10 @@ function apcpt_activation() {
     // Flush our rewrite rules on deactivation.
      
     function apcpt_deactivation() {
-    
+    // Exit if user does not have admin privliges
+    if ( ! current_user_can( 'activate_plugins' ) ) {
+        return;
+    }
         flush_rewrite_rules();
     }
 register_deactivation_hook( __FILE__, 'apcpt_deactivation' );

@@ -1,4 +1,4 @@
-![](https://raw.githubusercontent.com/Matthewpco/Jubilee-Design/master/img/JD-SS1.png)
+![](https://wpwebdevelopment.com/wp-content/uploads/2021/12/artesian-partners-cpt-clip.jpg)
 
 # This is a custom plugin designed for a complex e-commerce website that sells custom built computers. 
 
@@ -19,8 +19,7 @@
 <br>
 
 
-## ⚡ Changelog for v 1.01
-- Added clear rewrite rules upon activation and deactivation
-- Fixed a bug with permalinks not updating immediately
+## ⚡ Changelog for v 1.02
+- Added security check upon activation and deactivation to ensure user has admin privileges.
 <br>
-![](https://raw.githubusercontent.com/Matthewpco/Jubilee-Design/master/img/JD-SS2.png)
+![](https://wpwebdevelopment.com/wp-content/uploads/2021/12/artesian-partners-cpt-clip2.jpg)
