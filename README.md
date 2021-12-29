@@ -18,9 +18,18 @@
 - PHP
 <br>
 
-
+## ⚡ Changelog for v 1.01
+- Added clear rewrite rules upon activation and deactivation
+- Fixed a bug with permalinks not updating immediately
+## ⚡ Changelog for v 1.02
+- Added security check upon activation and deactivation to ensure user has admin privileges.
+## ⚡ Changelog for v 1.03
+- Added new post types and fields for partner pcs to be used with Woo Commerce products
+## ⚡ Changelog for v 1.04
+- Modularized codebase by seperating post type and field functions into their own seperate files under /includes to clean up the 2000 lines of code
 ## ⚡ Changelog for v 1.05
 - Added featured partner pcs to more easily seperate highly visible products and provide a better user experience for editors.
+
 <br>
 
 ![](https://wpwebdevelopment.com/wp-content/uploads/2021/12/artesian-partners-cpt-clip2.jpg)
