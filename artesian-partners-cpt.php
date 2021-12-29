@@ -1,14 +1,14 @@
 <?php
 /**
  * @package artesian-partners-cpt
- * @version 1.0
+ * @version 1.1
  */
 /*
 Plugin Name: Artesian Partners CPT
 Plugin URI: http://wpwebdevelopment.com
 Description: Establishes custom post types for different level of partners to display their information as well as setting up a post type linked to custom woocommerce product combinations
 Author: Matthew Payne
-Version: 1.0
+Version: 1.1
 Author URI: http://wpwebdevelopment.com
 */
 // Exit if accessed directly.
@@ -428,3 +428,20 @@ function register_partner_fields() {
 // Run functions on plugin init to register post types and fields
 add_action( 'init', 'register_partners_cpt' );
 add_action( 'init', 'register_partner_fields' );
+
+// Flush rewrites on activation
+function apcpt_activation() {
+    
+        register_partners_cpt();
+        flush_rewrite_rules();
+    }
+    
+    register_activation_hook( __FILE__, 'apcpt_activation' );
+    
+    // Flush our rewrite rules on deactivation.
+     
+    function apcpt_deactivation() {
+    
+        flush_rewrite_rules();
+    }
+register_deactivation_hook( __FILE__, 'apcpt_deactivation' );
