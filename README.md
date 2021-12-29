@@ -19,7 +19,9 @@
 <br>
 
 
-## ⚡ Changelog for v 1.03
-- Added new post types and fields for partner pcs to be used with Woo Commerce products
+## ⚡ Changelog for v 1.04
+- Modularized codebase by seperating post type and field functions into their own seperate files under /includes to clean up the 2000 lines of code
 <br>
+
 ![](https://wpwebdevelopment.com/wp-content/uploads/2021/12/artesian-partners-cpt-clip2.jpg)
+
