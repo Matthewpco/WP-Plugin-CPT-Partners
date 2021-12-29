@@ -7,6 +7,741 @@ if ( ! defined( 'ABSPATH' ) ) {
 
     function register_partner_fields() {
         if( function_exists('acf_add_local_field_group') ):
+    
+            acf_add_local_field_group(array(
+                'key' => 'group_61b236d8513ab',
+                'title' => 'Featured Partner PCs',
+                'fields' => array(
+                    array(
+                        'key' => 'field_61b236d86155d',
+                        'label' => 'url',
+                        'name' => 'url',
+                        'type' => 'url',
+                        'instructions' => '',
+                        'required' => 0,
+                        'conditional_logic' => 0,
+                        'wrapper' => array(
+                            'width' => '',
+                            'class' => '',
+                            'id' => '',
+                        ),
+                        'default_value' => '',
+                        'placeholder' => '',
+                    ),
+                    array(
+                        'key' => 'field_61b236d861523',
+                        'label' => 'Type Of Builder',
+                        'name' => 'type_of_builder',
+                        'type' => 'radio',
+                        'instructions' => '',
+                        'required' => 1,
+                        'conditional_logic' => array(
+                            array(
+                                array(
+                                    'field' => 'field_61b236d86155d',
+                                    'operator' => '==empty',
+                                ),
+                            ),
+                        ),
+                        'wrapper' => array(
+                            'width' => '',
+                            'class' => '',
+                            'id' => '',
+                        ),
+                        'choices' => array(
+                            'standard' => 'Mid/Full',
+                            'sff' => 'SFF',
+                        ),
+                        'allow_null' => 0,
+                        'other_choice' => 0,
+                        'default_value' => '',
+                        'layout' => 'vertical',
+                        'return_format' => 'value',
+                        'save_other_choice' => 0,
+                    ),
+                    array(
+                        'key' => 'field_61b236d8615d3',
+                        'label' => 'Case',
+                        'name' => 'case',
+                        'type' => 'post_object',
+                        'instructions' => '',
+                        'required' => 1,
+                        'conditional_logic' => array(
+                            array(
+                                array(
+                                    'field' => 'field_61b236d86155d',
+                                    'operator' => '==empty',
+                                ),
+                            ),
+                        ),
+                        'wrapper' => array(
+                            'width' => '',
+                            'class' => '',
+                            'id' => '',
+                        ),
+                        'post_type' => array(
+                            0 => 'product',
+                        ),
+                        'taxonomy' => array(
+                            0 => 'product_cat:unique-cases',
+                            1 => 'product_cat:part-cases',
+                            2 => 'product_cat:full-tower',
+                        ),
+                        'allow_null' => 0,
+                        'multiple' => 0,
+                        'return_format' => 'id',
+                        'ui' => 1,
+                    ),
+                    array(
+                        'key' => 'field_61b236d86160e',
+                        'label' => 'Vinyl Wrap',
+                        'name' => 'vinyl_wrap',
+                        'type' => 'post_object',
+                        'instructions' => '',
+                        'required' => 0,
+                        'conditional_logic' => array(
+                            array(
+                                array(
+                                    'field' => 'field_61b236d86155d',
+                                    'operator' => '==empty',
+                                ),
+                            ),
+                        ),
+                        'wrapper' => array(
+                            'width' => '',
+                            'class' => '',
+                            'id' => '',
+                        ),
+                        'post_type' => array(
+                            0 => 'product',
+                        ),
+                        'taxonomy' => array(
+                            0 => 'product_cat:custom',
+                            1 => 'product_cat:partner',
+                        ),
+                        'allow_null' => 1,
+                        'multiple' => 0,
+                        'return_format' => 'id',
+                        'ui' => 1,
+                    ),
+                    array(
+                        'key' => 'field_61b236d861647',
+                        'label' => 'Glass Etching',
+                        'name' => 'glass_etching',
+                        'type' => 'post_object',
+                        'instructions' => '',
+                        'required' => 0,
+                        'conditional_logic' => array(
+                            array(
+                                array(
+                                    'field' => 'field_61b236d86155d',
+                                    'operator' => '==empty',
+                                ),
+                            ),
+                        ),
+                        'wrapper' => array(
+                            'width' => '',
+                            'class' => '',
+                            'id' => '',
+                        ),
+                        'post_type' => array(
+                            0 => 'product',
+                        ),
+                        'taxonomy' => array(
+                            0 => 'product_cat:glass-etching',
+                            1 => 'product_cat:glass-etching-limited-edition',
+                        ),
+                        'allow_null' => 1,
+                        'multiple' => 0,
+                        'return_format' => 'id',
+                        'ui' => 1,
+                    ),
+                    array(
+                        'key' => 'field_61b236d861681',
+                        'label' => 'GPU Backplate',
+                        'name' => 'gpu_backplate',
+                        'type' => 'post_object',
+                        'instructions' => '',
+                        'required' => 0,
+                        'conditional_logic' => array(
+                            array(
+                                array(
+                                    'field' => 'field_61b236d86155d',
+                                    'operator' => '==empty',
+                                ),
+                            ),
+                        ),
+                        'wrapper' => array(
+                            'width' => '',
+                            'class' => '',
+                            'id' => '',
+                        ),
+                        'post_type' => array(
+                            0 => 'product',
+                        ),
+                        'taxonomy' => array(
+                            0 => 'product_cat:gpu-backplate',
+                            1 => 'product_cat:gpu-backplates-limited-edition',
+                        ),
+                        'allow_null' => 1,
+                        'multiple' => 0,
+                        'return_format' => 'id',
+                        'ui' => 1,
+                    ),
+                    array(
+                        'key' => 'field_61b236d8616bb',
+                        'label' => 'CPU',
+                        'name' => 'cpu',
+                        'type' => 'post_object',
+                        'instructions' => '',
+                        'required' => 1,
+                        'conditional_logic' => array(
+                            array(
+                                array(
+                                    'field' => 'field_61b236d86155d',
+                                    'operator' => '==empty',
+                                ),
+                            ),
+                        ),
+                        'wrapper' => array(
+                            'width' => '',
+                            'class' => '',
+                            'id' => '',
+                        ),
+                        'post_type' => array(
+                            0 => 'product',
+                        ),
+                        'taxonomy' => array(
+                            0 => 'product_cat:amd-cpu-parts2',
+                            1 => 'product_cat:intel-cpu-parts2',
+                        ),
+                        'allow_null' => 0,
+                        'multiple' => 0,
+                        'return_format' => 'id',
+                        'ui' => 1,
+                    ),
+                    array(
+                        'key' => 'field_61b236d8616f4',
+                        'label' => 'Motherboard',
+                        'name' => 'motherboard',
+                        'type' => 'post_object',
+                        'instructions' => '',
+                        'required' => 1,
+                        'conditional_logic' => array(
+                            array(
+                                array(
+                                    'field' => 'field_61b236d86155d',
+                                    'operator' => '==empty',
+                                ),
+                            ),
+                        ),
+                        'wrapper' => array(
+                            'width' => '',
+                            'class' => '',
+                            'id' => '',
+                        ),
+                        'post_type' => array(
+                            0 => 'product',
+                        ),
+                        'taxonomy' => array(
+                            0 => 'product_cat:motherboards',
+                        ),
+                        'allow_null' => 0,
+                        'multiple' => 0,
+                        'return_format' => 'id',
+                        'ui' => 1,
+                    ),
+                    array(
+                        'key' => 'field_61b236d86172f',
+                        'label' => 'CPU Cooler',
+                        'name' => 'cpu_cooler',
+                        'type' => 'post_object',
+                        'instructions' => '',
+                        'required' => 1,
+                        'conditional_logic' => array(
+                            array(
+                                array(
+                                    'field' => 'field_61b236d86155d',
+                                    'operator' => '==empty',
+                                ),
+                            ),
+                        ),
+                        'wrapper' => array(
+                            'width' => '',
+                            'class' => '',
+                            'id' => '',
+                        ),
+                        'post_type' => array(
+                            0 => 'product',
+                        ),
+                        'taxonomy' => array(
+                            0 => 'product_cat:cpu-coolers',
+                        ),
+                        'allow_null' => 0,
+                        'multiple' => 0,
+                        'return_format' => 'id',
+                        'ui' => 1,
+                    ),
+                    array(
+                        'key' => 'field_61bd09627ae51',
+                        'label' => 'Custom AIO Tubes',
+                        'name' => 'custom_aio_tubes',
+                        'type' => 'post_object',
+                        'instructions' => '',
+                        'required' => 0,
+                        'conditional_logic' => array(
+                            array(
+                                array(
+                                    'field' => 'field_61b236d86155d',
+                                    'operator' => '==empty',
+                                ),
+                            ),
+                        ),
+                        'wrapper' => array(
+                            'width' => '',
+                            'class' => '',
+                            'id' => '',
+                        ),
+                        'post_type' => array(
+                            0 => 'product',
+                        ),
+                        'taxonomy' => array(
+                            0 => 'product_cat:coolant-tubes',
+                        ),
+                        'allow_null' => 1,
+                        'multiple' => 0,
+                        'return_format' => 'id',
+                        'ui' => 1,
+                    ),
+                    array(
+                        'key' => 'field_61b236d861769',
+                        'label' => 'RAM',
+                        'name' => 'ram',
+                        'type' => 'post_object',
+                        'instructions' => '',
+                        'required' => 1,
+                        'conditional_logic' => array(
+                            array(
+                                array(
+                                    'field' => 'field_61b236d86155d',
+                                    'operator' => '==empty',
+                                ),
+                            ),
+                        ),
+                        'wrapper' => array(
+                            'width' => '',
+                            'class' => '',
+                            'id' => '',
+                        ),
+                        'post_type' => array(
+                            0 => 'product',
+                        ),
+                        'taxonomy' => array(
+                            0 => 'product_cat:ram',
+                        ),
+                        'allow_null' => 0,
+                        'multiple' => 0,
+                        'return_format' => 'id',
+                        'ui' => 1,
+                    ),
+                    array(
+                        'key' => 'field_61b236d8617a3',
+                        'label' => 'Graphics Card',
+                        'name' => 'graphics_card',
+                        'type' => 'post_object',
+                        'instructions' => '',
+                        'required' => 0,
+                        'conditional_logic' => array(
+                            array(
+                                array(
+                                    'field' => 'field_61b236d86155d',
+                                    'operator' => '==empty',
+                                ),
+                            ),
+                        ),
+                        'wrapper' => array(
+                            'width' => '',
+                            'class' => '',
+                            'id' => '',
+                        ),
+                        'post_type' => array(
+                            0 => 'product',
+                        ),
+                        'taxonomy' => array(
+                            0 => 'product_cat:graphics-cards',
+                        ),
+                        'allow_null' => 1,
+                        'multiple' => 0,
+                        'return_format' => 'id',
+                        'ui' => 1,
+                    ),
+                    array(
+                        'key' => 'field_61b236d8617dd',
+                        'label' => 'Power Supply',
+                        'name' => 'power_supply',
+                        'type' => 'post_object',
+                        'instructions' => '',
+                        'required' => 1,
+                        'conditional_logic' => array(
+                            array(
+                                array(
+                                    'field' => 'field_61b236d86155d',
+                                    'operator' => '==empty',
+                                ),
+                            ),
+                        ),
+                        'wrapper' => array(
+                            'width' => '',
+                            'class' => '',
+                            'id' => '',
+                        ),
+                        'post_type' => array(
+                            0 => 'product',
+                        ),
+                        'taxonomy' => array(
+                            0 => 'product_cat:power-supply',
+                            1 => 'product_cat:sff-psu',
+                        ),
+                        'allow_null' => 0,
+                        'multiple' => 0,
+                        'return_format' => 'id',
+                        'ui' => 1,
+                    ),
+                    array(
+                        'key' => 'field_61b236d861816',
+                        'label' => 'Fans',
+                        'name' => 'fans',
+                        'type' => 'post_object',
+                        'instructions' => '',
+                        'required' => 1,
+                        'conditional_logic' => array(
+                            array(
+                                array(
+                                    'field' => 'field_61b236d86155d',
+                                    'operator' => '==empty',
+                                ),
+                            ),
+                        ),
+                        'wrapper' => array(
+                            'width' => '',
+                            'class' => '',
+                            'id' => '',
+                        ),
+                        'post_type' => array(
+                            0 => 'product',
+                        ),
+                        'taxonomy' => array(
+                            0 => 'product_cat:non-rbg-fans',
+                            1 => 'product_cat:rgb-case-fans',
+                            2 => 'product_cat:sff-fans',
+                            3 => 'product_cat:high-count-rgb-case-fans',
+                        ),
+                        'allow_null' => 0,
+                        'multiple' => 0,
+                        'return_format' => 'id',
+                        'ui' => 1,
+                    ),
+                    array(
+                        'key' => 'field_61b236d861852',
+                        'label' => 'RGB Strip',
+                        'name' => 'rgb_strip',
+                        'type' => 'post_object',
+                        'instructions' => '',
+                        'required' => 0,
+                        'conditional_logic' => array(
+                            array(
+                                array(
+                                    'field' => 'field_61b236d86155d',
+                                    'operator' => '==empty',
+                                ),
+                            ),
+                        ),
+                        'wrapper' => array(
+                            'width' => '',
+                            'class' => '',
+                            'id' => '',
+                        ),
+                        'post_type' => array(
+                            0 => 'product',
+                        ),
+                        'taxonomy' => array(
+                            0 => 'product_cat:rgb-led-strips',
+                        ),
+                        'allow_null' => 1,
+                        'multiple' => 0,
+                        'return_format' => 'id',
+                        'ui' => 1,
+                    ),
+                    array(
+                        'key' => 'field_61b236d86188c',
+                        'label' => 'OS Drive',
+                        'name' => 'os_drive',
+                        'type' => 'post_object',
+                        'instructions' => '',
+                        'required' => 1,
+                        'conditional_logic' => array(
+                            array(
+                                array(
+                                    'field' => 'field_61b236d86155d',
+                                    'operator' => '==empty',
+                                ),
+                            ),
+                        ),
+                        'wrapper' => array(
+                            'width' => '',
+                            'class' => '',
+                            'id' => '',
+                        ),
+                        'post_type' => array(
+                            0 => 'product',
+                        ),
+                        'taxonomy' => array(
+                            0 => 'product_cat:nvme',
+                        ),
+                        'allow_null' => 0,
+                        'multiple' => 0,
+                        'return_format' => 'id',
+                        'ui' => 1,
+                    ),
+                    array(
+                        'key' => 'field_61b236d8618c6',
+                        'label' => 'Storage Drive',
+                        'name' => 'storage_drive',
+                        'type' => 'post_object',
+                        'instructions' => '',
+                        'required' => 0,
+                        'conditional_logic' => array(
+                            array(
+                                array(
+                                    'field' => 'field_61b236d86155d',
+                                    'operator' => '==empty',
+                                ),
+                            ),
+                        ),
+                        'wrapper' => array(
+                            'width' => '',
+                            'class' => '',
+                            'id' => '',
+                        ),
+                        'post_type' => array(
+                            0 => 'product',
+                        ),
+                        'taxonomy' => array(
+                            0 => 'product_cat:hdd',
+                            1 => 'product_cat:ssd',
+                        ),
+                        'allow_null' => 1,
+                        'multiple' => 0,
+                        'return_format' => 'id',
+                        'ui' => 1,
+                    ),
+                    array(
+                        'key' => 'field_61b236d861900',
+                        'label' => 'Storage Drive 2',
+                        'name' => 'storage_drive_2',
+                        'type' => 'post_object',
+                        'instructions' => '',
+                        'required' => 0,
+                        'conditional_logic' => array(
+                            array(
+                                array(
+                                    'field' => 'field_61b236d8618c6',
+                                    'operator' => '!=empty',
+                                ),
+                            ),
+                        ),
+                        'wrapper' => array(
+                            'width' => '',
+                            'class' => '',
+                            'id' => '',
+                        ),
+                        'post_type' => array(
+                            0 => 'product',
+                        ),
+                        'taxonomy' => array(
+                            0 => 'product_cat:hdd',
+                            1 => 'product_cat:ssd',
+                        ),
+                        'allow_null' => 1,
+                        'multiple' => 0,
+                        'return_format' => 'id',
+                        'ui' => 1,
+                    ),
+                    array(
+                        'key' => 'field_61b236d86193a',
+                        'label' => 'Custom Cable Extensions',
+                        'name' => 'custom_cable_extensions',
+                        'type' => 'post_object',
+                        'instructions' => '',
+                        'required' => 0,
+                        'conditional_logic' => array(
+                            array(
+                                array(
+                                    'field' => 'field_61b236d86155d',
+                                    'operator' => '==empty',
+                                ),
+                            ),
+                        ),
+                        'wrapper' => array(
+                            'width' => '',
+                            'class' => '',
+                            'id' => '',
+                        ),
+                        'post_type' => array(
+                            0 => 'product',
+                        ),
+                        'taxonomy' => array(
+                            0 => 'product_cat:cable-extensions',
+                        ),
+                        'allow_null' => 1,
+                        'multiple' => 0,
+                        'return_format' => 'id',
+                        'ui' => 1,
+                    ),
+                    array(
+                        'key' => 'field_61b236d861975',
+                        'label' => 'Windows',
+                        'name' => 'windows',
+                        'type' => 'post_object',
+                        'instructions' => '',
+                        'required' => 1,
+                        'conditional_logic' => array(
+                            array(
+                                array(
+                                    'field' => 'field_61b236d86155d',
+                                    'operator' => '==empty',
+                                ),
+                            ),
+                        ),
+                        'wrapper' => array(
+                            'width' => '',
+                            'class' => '',
+                            'id' => '',
+                        ),
+                        'post_type' => array(
+                            0 => 'product',
+                        ),
+                        'taxonomy' => array(
+                            0 => 'product_cat:operating-system',
+                        ),
+                        'allow_null' => 0,
+                        'multiple' => 0,
+                        'return_format' => 'id',
+                        'ui' => 1,
+                    ),
+                    array(
+                        'key' => 'field_61b236d8619b1',
+                        'label' => 'Professional Overclocking',
+                        'name' => 'professional_overclocking',
+                        'type' => 'post_object',
+                        'instructions' => '',
+                        'required' => 0,
+                        'conditional_logic' => array(
+                            array(
+                                array(
+                                    'field' => 'field_61b236d86155d',
+                                    'operator' => '==empty',
+                                ),
+                            ),
+                        ),
+                        'wrapper' => array(
+                            'width' => '',
+                            'class' => '',
+                            'id' => '',
+                        ),
+                        'post_type' => array(
+                            0 => 'product',
+                        ),
+                        'taxonomy' => array(
+                            0 => 'product_cat:professional-overclocking',
+                        ),
+                        'allow_null' => 1,
+                        'multiple' => 0,
+                        'return_format' => 'id',
+                        'ui' => 1,
+                    ),
+                    array(
+                        'key' => 'field_61b236d8619f1',
+                        'label' => 'Wifi Card',
+                        'name' => 'wifi_card',
+                        'type' => 'post_object',
+                        'instructions' => '',
+                        'required' => 1,
+                        'conditional_logic' => array(
+                            array(
+                                array(
+                                    'field' => 'field_61b236d86155d',
+                                    'operator' => '==empty',
+                                ),
+                            ),
+                        ),
+                        'wrapper' => array(
+                            'width' => '',
+                            'class' => '',
+                            'id' => '',
+                        ),
+                        'post_type' => array(
+                            0 => 'product',
+                        ),
+                        'taxonomy' => array(
+                            0 => 'product_cat:wifi-card',
+                        ),
+                        'allow_null' => 0,
+                        'multiple' => 0,
+                        'return_format' => 'id',
+                        'ui' => 1,
+                    ),
+                    array(
+                        'key' => 'field_61b236d861a2b',
+                        'label' => 'Capture Card',
+                        'name' => 'capture_card',
+                        'type' => 'post_object',
+                        'instructions' => '',
+                        'required' => 0,
+                        'conditional_logic' => array(
+                            array(
+                                array(
+                                    'field' => 'field_61b236d86155d',
+                                    'operator' => '==empty',
+                                ),
+                            ),
+                        ),
+                        'wrapper' => array(
+                            'width' => '',
+                            'class' => '',
+                            'id' => '',
+                        ),
+                        'post_type' => array(
+                            0 => 'product',
+                        ),
+                        'taxonomy' => array(
+                            0 => 'product_cat:capture-cards',
+                        ),
+                        'allow_null' => 1,
+                        'multiple' => 0,
+                        'return_format' => 'id',
+                        'ui' => 1,
+                    ),
+                ),
+                'location' => array(
+                    array(
+                        array(
+                            'param' => 'post_type',
+                            'operator' => '==',
+                            'value' => 'featured_partner_pcs',
+                        ),
+                    ),
+                ),
+                'menu_order' => 0,
+                'position' => 'normal',
+                'style' => 'default',
+                'label_placement' => 'top',
+                'instruction_placement' => 'label',
+                'hide_on_screen' => '',
+                'active' => true,
+                'description' => '',
+                'show_in_rest' => 1,
+            ));
             
             acf_add_local_field_group(array(
                 'key' => 'group_61a50b4ddfa1e',
