@@ -1,7 +1,7 @@
 <?php
 /**
  * @package artesian-partners-cpt
- * @version 1.0.5
+ * @version 1.0.6
  */
 /*
 Plugin Name: Artesian Partners CPT
@@ -23,7 +23,6 @@ include( plugin_dir_path( __FILE__ ) . 'includes/acpt_register_fields.php');
 
 // Run functions on plugin init to register post types and fields
 add_action( 'init', 'register_partners_cpt' );
-add_action( 'init', 'register_partner_fields' );
 
 // Flush rewrites on activation
 function apcpt_activation() {
