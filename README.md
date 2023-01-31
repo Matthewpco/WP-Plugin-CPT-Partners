@@ -1,6 +1,6 @@
 ![](https://wpwebdevelopment.com/wp-content/uploads/2021/12/artesian-partners-cpt-clip.jpg)
 
-# This is a custom plugin designed for a complex e-commerce website that sells custom built computers. 
+# This is a custom plugin designed for a WooCommerce shop website selling custom built computers for Artesian Builds in San Francisco CA. 
 
 <br>
 
